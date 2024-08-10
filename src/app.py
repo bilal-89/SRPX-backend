@@ -133,31 +133,19 @@ def get_unified_data():
 
     enhanced_result = []
     for activity in result:
+        actions = activity['Actions'].split(',')
         enhanced_activity = {
             **activity,
             'Sequence': [
                 {
-                    'Action': 'Study',
-                    'Material': activity['MaterialUsed']
-                },
-                {
-                    'Action': 'Consult',
-                    'Topic': activity['ServiceProjectType'] if activity['ActivityType'] in ['JYG', 'Nucleus'] else 'General'
-                },
-                {
-                    'Action': 'Reflect',
-                    'Topic': 'Activity Impact'
-                },
-                {
-                    'Action': 'Act',
-                    'Topic': activity['ServiceProjectType'] if activity['ActivityType'] in ['JYG', 'Nucleus'] else 'Apply Learnings'
-                }
+                    'Action': action.split(':')[0].strip(),
+                    'Topic': action.split(':')[1].strip() if ':' in action else None
+                } for action in actions
             ]
         }
         enhanced_result.append(enhanced_activity)
 
     return jsonify(enhanced_result)
-
 
 @app.route('/api/network-data')
 def get_network_data():
