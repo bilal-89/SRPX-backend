@@ -1,0 +1,11 @@
+Time,Longitude,Latitude,ActivityType,ActivitySize,Person,Role,Group
+2024-07-17,-75.2344,39.9487,JYG,4,Idris,Animator,Group1
+2024-07-19,-75.2344,39.9487,JYG,9,Kaley,Participant,Group1
+2024-07-20,-75.2344,39.9487,CC,3,Hanif,Teacher,Group2
+2024-07-20,-75.2345,39.9488,YG,7,Tayana,Facilitator,Group3
+2024-07-21,-75.2344,39.9487,JYG,3,Tiffany,Participant,Group1
+2024-07-22,-75.2345,39.9488,YG,5,Hannah,Participant,Group3
+2024-07-23,-75.2346,39.9489,CC,6,Khalif,Teacher,Group4
+2024-07-25,-75.2344,39.9487,JYG,19,Idris,Animator,Group1
+2024-07-26,-75.2345,39.9488,YG,14,Ikeem,Facilitator,Group3
+2024-07-29,-75.2346,39.9489,CC,27,Hanif,Teacher,Group4
